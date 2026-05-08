@@ -55,8 +55,20 @@ The hardware interface (ESP32).
 
 To explore or deploy the system, it is recommended to start with the **[Cloud Repository](https://github.com/MuoiVung/smart-cushion-cloud)** to set up the infrastructure, followed by the **[App](https://github.com/MuoiVung/smart-cushion-app)** for the interface.
 
-## 🤝 Authors
-- **Vincent Nam Tran** - Lead Developer & AI Engineer
+## 🤝 Team Members
+
+We are a group of engineers and designers dedicated to building the future of ergonomic sitting.
+
+- **To Nguyen Tan Phuong** – *Hardware & Edge Engineer*  
+  Hardware architecture specialist focusing on sensor integration and robust edge systems.
+- **Tran Viet Nam** – *Fog & Hardware Integration*  
+  Architects scalable local infrastructures and bridges the gap between hardware and high-level software.
+- **Nguyen Thao Huong** – *AI Consultant & Model Designer*  
+  AI expert specializing in custom model design for human posture classification.
+- **Dong Boi Thi** – *Cloud & Dashboard Developer*  
+  Specializes in cloud backend frameworks and real-time data processing pipelines.
+- **Hoang Mai Vu** – *Real-time Dashboard Architect*  
+  Architects high-performance real-time dashboards and interactive user experiences.
 
 ---
 
