@@ -96,6 +96,8 @@ CapyCushion follows a **Cloud-Fog-Edge** paradigm, distributing intelligence acr
 | 8 | **Cloud** | `ProcessSummaryFn` Lambda calculates Gems earned: **1 Gem per 10 s of NUP posture** |
 | 9 | **App ↔ Cloud** | User interacts with Gacha: rolls stickers, checks collection — all via REST API |
 
+> ℹ️ **For detailed technical specifications regarding sensor calibration, raw signal quality filtering, feature engineering, and cross-subject validation, please refer to the [AI Data Pipeline & Processing Flow](./DATA_PIPELINE.md) guide.**
+
 ### Why Cloud-Fog-Edge?
 
 | Concern | Solution |
