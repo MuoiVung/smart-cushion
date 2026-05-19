@@ -73,19 +73,21 @@ def _noise_filter(df: pd.DataFrame, noise_thr: int = 20) -> pd.DataFrame:
 - **Rationale**: Eliminates frames where the seat is empty or the user is barely touching the cushion.
 
 ### Step 3: Total Pressure Stability Filter
-- **Action**: Let `S_i` be the sum of all 9 FSR sensors for row `i`, and `μ` (mean) be the average sum across the entire recording session. The pipeline only retains rows satisfying:
-  `0.75 * μ <= S_i <= 1.25 * μ`
+- **Action**: Let $S_i$ be the sum of all 9 FSR sensors for row $i$, and $\mu$ be the average of $S_i$ across the entire recording session. The pipeline only retains rows satisfying:
+  
+  $$0.75 \times \mu \le S_i \le 1.25 \times \mu$$
 - **Rationale**: Filters out sudden weight shifting anomalies, spikes, or instances where the subject temporarily lifted off the seat.
 
 ---
 
 ## 📐 3. Feature Engineering & Normalization
 
-Once filtered, raw pressure values (`N x 9`) are transformed to achieve weight invariance and capture physical spatial properties:
+Once filtered, raw pressure values ($N \times 9$) are transformed to achieve weight invariance and capture physical spatial properties:
 
 ### Weight-Invariant Normalization (Sum-to-1)
 To ensure the model adapts seamlessly to lightweight or heavier individuals, the raw pressure values for each row are normalized by the row's total pressure:
-`x_norm,k = x_k / sum(x_j for j from 1 to 9)`
+
+$$x_{\text{norm}, k} = \frac{x_k}{\sum_{j=1}^{9} x_j}$$
 
 ### Physical Feature Extraction (22-Dimensional Feature Space)
 For **Random Forest** models, we compute **13 additional features** representing center of pressure, diagonal asymmetry, and region-specific weights:
